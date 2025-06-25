@@ -3,68 +3,28 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
 
-    {
-        title: 'E-commerce Platform',
-        description: 'A full-stack e-commerce platform built with Next.js, TypeScript, and Tailwind CSS.',
-        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Stripe'],
-        githubLink: 'https://github.com',
-        demoLink: 'https://demo.com',
-        image: '/projects/e-commerce-website.png',
-      },
-      {
-        title: 'Task Management App',
-        description: 'A collaborative task management application with real-time updates.',
-        technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-        githubLink: 'https://github.com',
-        demoLink: 'https://demo.com',
-        image: '/projects/task-manager.webp',
-      },
-      {
-        title: 'Portfolio Website',
-        description: 'My personal portfolio website showcasing my projects and skills.',
-        technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-        githubLink: 'https://github.com',
-        demoLink: 'https://demo.com',
-        image: '/projects/portfolio-website.jpg',
-      },
-      {
-        title: 'Blog Platform',
-        description: 'A blogging platform with user authentication and markdown support.',
-        technologies: ['Gatsby', 'GraphQL', 'Contentful'],
-        githubLink: 'https://github.com',
-        demoLink: 'https://demo.com',
-        image: '/projects/blog-website.jpeg',
-      },
-      {
-        title: 'Weather App',
-        description: 'A weather application that provides real-time weather updates.',
-        technologies: ['React', 'OpenWeatherMap API'],
-        githubLink: 'https://github.com',
-        demoLink: 'https://demo.com',
-        image: '/projects/weather-app.png',
-      },
-      {
-        title: 'Chat Application',
-        description: 'A real-time chat application using WebSocket technology.',
-        technologies: ['React', 'Node.js', 'Socket.io'],
-        githubLink: 'https://github.com',
-        demoLink: 'https://demo.com',
-        image: '/projects/chat-app.png',
-      },
-      {
-        title: 'Recipe Finder',
-        description: 'A recipe search application using the Edamam API.',
-        technologies: ['React', 'Edamam API'],
-        githubLink: 'https://github.com',
-        demoLink: 'https://demo.com',
-        image: '/projects/recipe-finder.png',
-      },
-      {
-        title: 'Expense Tracker',
-        description: 'A personal finance tracker to manage expenses and income.',
-        technologies: ['React', 'Firebase'],
-        githubLink: 'https://github.com',
-        demoLink: 'https://demo.com',
-        image: '/projects/expense-tracker.webp',
-      }
-  ];
+  {
+    title: 'Vehiql AI - Car Marketplace Project',
+    description: 'An intelligent, full-stack car marketplace powered by AI, built using React 19 and Next.js 15. It features real-time listings, authentication, and a modern UI with Tailwind and Shadcn.',
+    technologies: ['React 19', 'Next.js 15', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'Supabase', 'Gemini API', 'Clerk', 'Arcjet', 'Shadcn UI'],
+    githubLink: 'https://github.com/RaviKumarGupta07/vehiql',
+    demoLink: 'https://vehiql-three.vercel.app/',
+    image: '/projects/vehiqlAIimage.png',
+  },
+  {
+  title: 'BookStore MERN App',
+  description: 'A full-featured MERN stack bookstore with user authentication, admin dashboard, cart system, and order management. Built from scratch covering both frontend and backend.',
+  technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux', 'RTK Query', 'Mongoose', 'JWT'],
+  githubLink: 'https://github.com/RaviKumarGupta07/book-store-frontend',
+  demoLink: 'https://book-store-frontend-three-tau.vercel.app/',
+  image: '/projects/book-store-mern-project-image.png',
+},
+  {
+    title: 'Portfolio Website',
+    description: 'My personal portfolio website showcasing my projects and skills.',
+    technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
+    githubLink: 'https://github.com/RaviKumarGupta07/devfolio-portfolio-website',
+    demoLink: 'https://book-store-frontend-three-tau.vercel.app/',
+    image: '/projects/portfolioRavi.png',
+  },
+];

@@ -1,47 +1,45 @@
-'use client'
+"use client";
 
-import { projects } from '@/contents/project'
-import Image from 'next/image'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { projects } from '@/contents/project';
+import Image from 'next/image';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 export default function Projects() {
   return (
-    <div className="container max-w-7xl mx-auto py-12">
-      <h1 className="text-4xl font-bold mb-4 text-center">
-        My Projects
-      </h1>
-      <p className="text-lg text-secondary mb-24 text-center">
-        Here are some of my recent projects. Click on the links to view the code or live demo.
-      </p>
+    <section className="py-20">
+      <div className="container max-w-7xl mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-12 text-center">
+          Featured Projects
+        </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
-          >
-            <div className="aspect-video bg-gray-200 dark:bg-gray-800">
-              <Image
-                src={project.image}
-                alt={project.title}
-                className="object-cover w-full h-full"
-                width={500}
-                height={500}
-              />
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <article
+              key={project.title}
+              className="bg-white dark:bg-dark/50 rounded-lg shadow-md p-6"
+            >
+              <div className="relative aspect-video mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
 
-            <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">
                 {project.title}
               </h3>
-              <p className="text-secondary mb-4">
+
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
                 {project.description}
               </p>
 
               <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech, techIndex) => (
+                {project.technologies.map((tech) => (
                   <span
-                    key={techIndex}
+                    key={tech}
                     className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
                   >
                     {tech}
@@ -69,10 +67,10 @@ export default function Projects() {
                   <span>Live Demo</span>
                 </a>
               </div>
-            </div>
-          </div>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
-  )
+    </section>
+  );
 }
