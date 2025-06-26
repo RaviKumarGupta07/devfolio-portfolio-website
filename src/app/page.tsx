@@ -9,7 +9,7 @@ export default function Home() {
       <Hero/>
       <MyProjects/>
       {/* <Blogs/> */}
-      <Newsletter/>
+      {/* <Newsletter/> */}
     </main>
     
   );
