@@ -20,7 +20,7 @@ export default function HeroSection() {
             transition={{ ...scaleIn.transition, delay: 0.2 }}
           >
             <Image
-              src="/profilePhotoRK.jpeg"
+              src="/profile.jpeg"
               alt="Profile"
               width={100}
               height={100}
