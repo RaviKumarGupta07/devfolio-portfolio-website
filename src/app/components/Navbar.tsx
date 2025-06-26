@@ -72,7 +72,7 @@ export default function Navbar() {
                         <div className="absolute top-16 left-0 w-full bg-white/90 dark:bg-dark/90 border-b border-gray-300
                          dark:border-gray-700 md:hidden z-50 transition-colors">
                             <div className="py-4 px-4 space-y-4">
-                                {menuItems.map((item, index) => (
+                                {menuItems.map((item) => (
                                     <div key={item.href}>
                                         <Link
                                             href={item.href}
