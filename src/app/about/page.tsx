@@ -4,8 +4,7 @@ import { FaCode, FaLaptopCode, FaGraduationCap } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import {
   fadeInUp,
-  staggerContainer,
-  cardHover
+  staggerContainer
 } from '@/utils/animations';
 
 export default function About() {
