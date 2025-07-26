@@ -17,6 +17,8 @@ export default function HeroSection() {
             className="flex justify-center items-center mb-4"
             initial={scaleIn.initial}
             animate={scaleIn.animate}
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.95 }}
             transition={{ ...scaleIn.transition, delay: 0.2 }}
           >
             <Image
@@ -24,7 +26,7 @@ export default function HeroSection() {
               alt="Profile"
               width={100}
               height={100}
-              className="rounded-full w-32 h-32 object-cover ring-2 ring-primary"
+              className="rounded-full w-32 h-32 object-cover ring-2 ring-primary transition-transform duration-300"
             />
           </motion.div>
 

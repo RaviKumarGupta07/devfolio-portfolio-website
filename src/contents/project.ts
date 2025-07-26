@@ -12,13 +12,13 @@ export const projects: Project[] = [
     image: '/projects/vehiqlAIimage.png',
   },
   {
-  title: 'BookStore MERN App',
-  description: 'A full-featured MERN stack bookstore with user authentication, admin dashboard, cart system, and order management. Built from scratch covering both frontend and backend.',
-  technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux', 'RTK Query', 'Mongoose', 'JWT'],
-  githubLink: 'https://github.com/RaviKumarGupta07/book-store-frontend',
-  demoLink: 'https://book-store-frontend-three-tau.vercel.app/',
-  image: '/projects/book-store-mern-project-image.png',
-},
+    title: 'BookStore MERN App',
+    description: 'A full-featured MERN stack bookstore with user authentication, admin dashboard, cart system, and order management. Built from scratch covering both frontend and backend.',
+    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux', 'RTK Query', 'Mongoose', 'JWT'],
+    githubLink: 'https://github.com/RaviKumarGupta07/book-store-frontend',
+    demoLink: 'https://book-store-frontend-three-tau.vercel.app/',
+    image: '/projects/book-store-mern-project-image.png',
+  },
   {
     title: 'Portfolio Website',
     description: 'My personal portfolio website showcasing my projects and skills.',
@@ -26,5 +26,13 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/RaviKumarGupta07/devfolio-portfolio-website',
     demoLink: 'https://devfolio-portfolio-website.vercel.app/',
     image: '/projects/portfolioRavi.png',
+  },
+  {
+    title: 'Leaderboard App',
+    description: 'A responsive leaderboard app built with React, Vite, and Tailwind CSS. Add users, claim points, and see real-time rank updates with pagination and clean UI.',
+    technologies: ['React.js', 'Vite', 'Tailwind CSS', 'Axios', 'React Router', 'React Hot Toast'],
+    githubLink: 'https://github.com/RaviKumarGupta07/leaderboard-system-frontend',
+    demoLink: 'https://leaderboard-system-frontend.vercel.app/',
+    image: '/projects/Leaderboard.png'
   },
 ];

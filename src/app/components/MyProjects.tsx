@@ -1,22 +1,32 @@
 "use client";
 
-import { projects } from '@/contents/project';
-import Image from 'next/image';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { projects } from "@/contents/project";
+import Image from "next/image";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
     <section className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">
+        <motion.h2
+          className="text-3xl font-bold mb-12 text-center"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           Featured Projects
-        </h2>
+        </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <article
-              key={project.title}
+          {projects.map((project, index) => (
+            <motion.article
+              key={project.title + index}
               className="bg-white dark:bg-dark/50 rounded-lg shadow-md p-6"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.03, boxShadow: "0 10px 20px rgba(0,0,0,0.15)" }}
+              transition={{ duration: 0.4, delay: index * 0.15 }}
             >
               <div className="relative aspect-video mb-4 rounded-lg overflow-hidden">
                 <Image
@@ -28,22 +38,23 @@ export default function Projects() {
                 />
               </div>
 
-              <h3 className="text-xl font-semibold mb-2">
-                {project.title}
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
 
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 {project.description}
               </p>
 
               <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
+                {project.technologies.map((tech, techIndex) => (
+                  <motion.span
+                    key={techIndex}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: techIndex * 0.1 }}
                     className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
                   >
                     {tech}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
 
@@ -67,7 +78,7 @@ export default function Projects() {
                   <span>Live Demo</span>
                 </a>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

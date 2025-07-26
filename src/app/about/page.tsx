@@ -1,30 +1,52 @@
-'use client'
+'use client';
 
-import { FaCode, FaLaptopCode, FaGraduationCap } from 'react-icons/fa'
+import { FaCode, FaLaptopCode, FaGraduationCap } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import {
+  fadeInUp,
+  staggerContainer,
+  cardHover
+} from '@/utils/animations';
 
 export default function About() {
   return (
-    <div className="container max-w-7xl mx-auto py-12">
+    <motion.div
+      className="container max-w-7xl mx-auto py-12"
+      variants={staggerContainer}
+      initial="initial"
+      animate="animate"
+    >
       {/* Heading */}
-      <h1 className="text-4xl font-bold mb-8 text-center">
+      <motion.h1 className="text-4xl font-bold mb-8 text-center" variants={fadeInUp}>
         About Me
-      </h1>
+      </motion.h1>
 
       {/* Bio Section */}
-      <section className="mb-16">
+      <motion.section className="mb-16" variants={fadeInUp}>
         <p className="text-lg text-secondary max-w-3xl mx-auto text-center">
           I&apos;m a passionate Full Stack Developer with expertise in building modern web applications.
           With a strong foundation in both frontend and backend technologies, I create seamless
           user experiences and robust server-side solutions.
         </p>
-      </section>
+      </motion.section>
 
       {/* Skills Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-center">Skills</h2>
+      <motion.section className="mb-16" variants={staggerContainer}>
+        <motion.h2
+          className="text-2xl font-bold mb-6 text-center"
+          variants={fadeInUp}
+        >
+          Skills
+        </motion.h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Frontend */}
-          <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
+          <motion.div
+            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md cursor-pointer"
+            variants={fadeInUp}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
             <FaCode className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Frontend</h3>
             <ul className="text-secondary space-y-2">
@@ -33,10 +55,15 @@ export default function About() {
               <li>Tailwind CSS</li>
               <li>HTML5 / CSS3</li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Backend */}
-          <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
+          <motion.div
+            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md cursor-pointer"
+            variants={fadeInUp}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
             <FaLaptopCode className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Backend</h3>
             <ul className="text-secondary space-y-2">
@@ -45,30 +72,39 @@ export default function About() {
               <li>PostgreSQL</li>
               <li>MongoDB</li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Tools */}
-          <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
+          <motion.div
+            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md cursor-pointer"
+            variants={fadeInUp}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
             <FaGraduationCap className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Tools & Others</h3>
             <ul className="text-secondary space-y-2">
               <li>Git / GitHub</li>
-              {/* <li>Docker</li> */}
               <li>Postman</li>
-              {/* <li>AWS</li>
-              <li>CI/CD</li> */}
             </ul>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Experience Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-center">Projects & Experience</h2>
-        <div className="max-w-3xl mx-auto space-y-8">
+      <motion.section className="mb-16" variants={staggerContainer}>
+        <motion.h2 className="text-2xl font-bold mb-6 text-center" variants={fadeInUp}>
+          Projects & Experience
+        </motion.h2>
 
+        <div className="max-w-3xl mx-auto space-y-8">
           {/* Vehiql Project */}
-          <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
+          <motion.div
+            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md cursor-pointer"
+            variants={fadeInUp}
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
             <h3 className="text-xl font-semibold mb-2">AI Car Marketplace – Vehiql</h3>
             <p className="text-primary mb-2">Personal Full Stack Project • 2025</p>
             <ul className="text-secondary list-disc list-inside space-y-2 mb-2">
@@ -84,10 +120,15 @@ export default function About() {
             >
               View on GitHub ↗
             </a>
-          </div>
+          </motion.div>
 
           {/* Bookstore Project */}
-          <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
+          <motion.div
+            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md cursor-pointer"
+            variants={fadeInUp}
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
             <h3 className="text-xl font-semibold mb-2">Bookstore Management System</h3>
             <p className="text-primary mb-2">Full Stack MERN Project • 2025</p>
             <ul className="text-secondary list-disc list-inside space-y-2 mb-2">
@@ -103,25 +144,32 @@ export default function About() {
             >
               View on GitHub ↗
             </a>
-          </div>
-
+          </motion.div>
         </div>
-      </section>
-
+      </motion.section>
 
       {/* Education Section */}
-      <section>
-        <h2 className="text-2xl font-bold mb-6 text-center">Education</h2>
+      <motion.section variants={staggerContainer}>
+        <motion.h2 className="text-2xl font-bold mb-6 text-center" variants={fadeInUp}>
+          Education
+        </motion.h2>
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-2">Bachelor of Technology in Information Technology</h3>
+          <motion.div
+            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md cursor-pointer"
+            variants={fadeInUp}
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
+            <h3 className="text-xl font-semibold mb-2">
+              Bachelor of Technology in Information Technology
+            </h3>
             <p className="text-primary mb-2">BIET Jhansi • 2022 - 2026</p>
             <p className="text-secondary">
               Final Year Student. Focused on software engineering and web development.
             </p>
-          </div>
+          </motion.div>
         </div>
-      </section>
-    </div>
-  )
+      </motion.section>
+    </motion.div>
+  );
 }
